@@ -32,6 +32,7 @@ declare module Components {
 
     interface ComponentsUtils {
         import(url: string, scope?: object): object;
+        readonly reportError: (string) => void;
     }
 }
 
@@ -168,7 +169,7 @@ declare module OS {
 declare module Services {
     const appinfo: nsIXULAppInfo;
     const io: nsIIOService;
-    const prefs: nsIPrefService;
+    const prefs: _prefs;
     const scriptloader: mozIJSSubScriptLoader;
     const storage: mozIStorageService;
     const strings: nsIStringBundleService;
@@ -177,6 +178,8 @@ declare module Services {
     interface mozIJSSubScriptLoader {
         loadSubScript(url: string, targetObj?: object , charset?: string): any;
     }
+
+    interface _prefs extends nsIPrefService, nsIPrefBranch {};
 }
 
 /** JavaScript code module "resource://gre/modules/XPCOMUtils.jsm" */

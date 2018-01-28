@@ -20,6 +20,8 @@
 		<em:contributor>Pier Carlo Chiodi AKA pierky</em:contributor>
 
 		<em:homepageURL>https://github.com/lieser/dkim_verifier/wiki</em:homepageURL>
+
+		<em:optionsType>3</em:optionsType>
 		<em:optionsURL>chrome://dkim_verifier/content/options.xul</em:optionsURL>
 
 		<em:targetApplication>
